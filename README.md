@@ -1,4 +1,21 @@
 # DD_Dice-SimulatorPlus
+
+## User Scenario
+
+## Target Users
+
+## Project Description
+
+## Distribtuion of Work
++ Who
+  - What
++ Who
+  - What
++ Who
+  - What
++ Who
+  - What
+
 A dice rolling game that keeps track of stats and how much you are wasting your social life. 
 
 Chance- Animator/graphics

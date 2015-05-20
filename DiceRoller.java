@@ -1,7 +1,7 @@
 //Jacob Contreras
 import java.util.*;
 
-public class MoveGenerator{
+public class DiceRoller{
   public static void main(String[] args){
 
   }

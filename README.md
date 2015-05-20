@@ -21,6 +21,7 @@
   - Animation of dice and other objects
 + James
   - Stats and other applications coding
+  - add character sheets
 + Ethan
   - Stats and other applications coding
 

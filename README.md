@@ -28,5 +28,6 @@
 
 References:
 http://www.hamesucken.com/combat.html
+http://cadwe.free.fr/cadr/DD4/Player's%20Handbook.pdf
 
 

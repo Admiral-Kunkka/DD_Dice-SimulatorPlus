@@ -60,8 +60,6 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
    }
    
    public void paint(Graphics g){
-      System.out.println(mouseX);
-      System.out.println(mouseY);
       
       g.setColor(Color.white);
       g.fillRect(15, 15, 750, 895);
@@ -106,8 +104,18 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       if(ifRollButtonPressed){
          g.setColor(Color.darkGray);
          g.fillRect(1250,700,200,100);
-         Random dicePicker = new Random();
-         n = dicePicker.nextInt(5)+1;
+         if(ifD4)
+            DiceRollerD4();
+         if(ifD6)
+            DiceRollerD6();
+         if(ifD8)
+            DiceRollerD8();
+         if(ifD10)
+            DiceRollerD10();
+         if(ifD12)
+            DiceRollerD12();
+         if(ifD20)
+            DiceRollerD20();
       }
       if(ifD4){
          g.setColor(Color.darkGray);
@@ -163,38 +171,7 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.fillPolygon(xPoints, yPoints, 3);
       }  
        
-      //rolls the die
-      g.setColor(Color.blue);
-      if(ifD4){
-         Random diceRoller = new Random();
-         g.drawString(theDie,1345,450);
-         //g.drawString("D4",1340,245);
-      }
-      else if(ifD6){
-         Random diceRoller = new Random();
-         g.drawString(theDie,1345,410);
-         //g.drawString("D6",1340,245);
-      }   
-      else if(ifD8){
-         Random diceRoller = new Random();
-         die = diceRoller.nextInt(7)+1;
-         //g.drawString("D8",1340,245);
-      }   
-      else if(ifD10){
-         Random diceRoller = new Random();
-         g.drawString(theDie,1345,450);
-         //g.drawString("D10",1340,245);
-      }   
-      else if(ifD12){
-         Random diceRoller = new Random();
-         g.drawString(theDie,1345,425);
-         //g.drawString("D12",1340,245);
-      }
-      else if(ifD20){
-         Random diceRoller = new Random();
-         g.drawString(theDie,1345,450);
-         //g.drawString("D20",1340,245);
-      }  
+      //rolls the die  
       
       
       g.setColor(Color.blue);

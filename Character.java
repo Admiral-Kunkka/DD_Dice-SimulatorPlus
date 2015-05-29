@@ -18,13 +18,10 @@ public class Character{
    String deity;
  //Inventory Lists
    ArrayList<atWill> atWillList = new ArrayList<atWill>();
-   ArrayList<SpclAbility> SpclAbilityList = new ArrayList<SpclAbility>;
-   ArrayList<adventGear> adventGearList = new ArrayList<adventGear>;
-   ArrayList<Weapon> weaponList = new ArrayList<Weapon>;
-   ArrayList<Armor> armorList = new ArrayList<Armor>;
-   //Arryalist<MagicItem> MagicItemsList = new ArrayList<MagicItem>;
-   //              ^-- Ethan gets to create that class :3
-   
+   ArrayList<SpclAbility> spclAbilityList = new ArrayList<SpclAbility>();
+   ArrayList<adventGear> adventGearList = new ArrayList<adventGear>();
+   ArrayList<Weapon> weaponList = new ArrayList<Weapon>();
+   ArrayList<Armor> armorList = new ArrayList<Armor>();
    
    public Character(){}
    

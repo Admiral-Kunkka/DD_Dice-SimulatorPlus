@@ -3,6 +3,7 @@ import java.util.*;
 public class Character{
  //Basic Stats
    String name;
+   int level; 
    String owner;
    String classType;
    String paragonPath;
@@ -16,6 +17,7 @@ public class Character{
    int weight;
    String alignment;
    String deity;
+   int abilityMod;
  //Inventory Lists
    ArrayList<atWill> atWillList = new ArrayList<atWill>();
    ArrayList<SpclAbility> spclAbilityList = new ArrayList<SpclAbility>();
@@ -40,6 +42,8 @@ public class Character{
    public void setWeight(int x){weight = x;}
    public void setAlignment(String x){alignment = x;}
    public void setDeity(String x){deity = x;}
+   public void setLevel(int x){level = x;}
+   public void setAbilityMod(int x){abilityMod = x;}
  //Get Methods
    public String getName(){return name;}
    public String getOwner(){return owner;}
@@ -55,7 +59,21 @@ public class Character{
    public int getWeight(){return weight;}
    public String getAlignment(){return alignment;}
    public String getDeity(){return deity;}
- //List Get Methods
+   public int getLevel(){return level;}
+   public int getAbilityMod(){return abilityMod;}
+
+   public int baseAttack()
+   {
+      return level/2 + abilityMod /* + raceBonus + enhancement + itemBonus + powerBonus + powerBonus + misc*/;
+   }
    
+   public int defence()
+   {
+      return 10 + level/2 /* + armorBonus + sheildBonus + fortitude + will + raceBonus + enhancement + itemBonus + powerBonus + misc */;
+   }
    
+   public int speed()
+   {
+      return -1; /* raceSpeed + misc - Armor.getArmorMod */
+   }
 }

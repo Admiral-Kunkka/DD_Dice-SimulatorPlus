@@ -95,5 +95,40 @@ public class UIEditor{
          System.out.println("That's not a number you idiot!");
       } 
    }
+   public static void editRitual(){
+      Ritual v = new Ritual();
+      System.out.println("Name of the ritual >> ");
+         v.setName(in.nextLine().trim());
+      System.out.println("Name of the catagory >> ");
+         v.setCatagory(in.nextLine().trim());
+      System.out.println("Name of the Key Skill >> ");
+         v.setKeySkill(in.nextLine().trim());
+      try{
+         System.out.print("Level of the ritual >> ");
+         v.setLevel(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      } 
+      try{
+         System.out.print("Durration of the ritual >> ");
+         v.setDurration(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      } 
+      try{
+         System.out.print("Cost of the Ritual >> ");
+         v.setCompCost(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      } 
+      try{
+         System.out.print("Market Cost of the Ritual >> ");
+         v.setMrktCost(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      } 
+      System.out.print("Describe what your using or anything extra you want >> ");
+         v.setInfo(in.nextLine().trim());
+   }
    
 }

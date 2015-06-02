@@ -8,7 +8,8 @@ public class UIEditor{
       in = new Scanner(System.in);
       System.out.println("Welcome to your editor choose to edit Armor");
       editArmor();
-      editWeapon()
+      editWeapon();
+      editAdventGear();
    }
    public static void editArmor(){
       Armor x =  new Armor();
@@ -74,8 +75,25 @@ public class UIEditor{
       }catch(Exception e){
          System.out.println("That's not a number you idiot!");
       }
-         System.out.print("Describe what your wearing or anything extra you want >> ");
+         System.out.print("Describe what your using or anything extra you want >> ");
          y.setInfo(in.nextLine().trim());   
       }
-
+      public static void editAdventGear(){
+      adventGear z = new adventGear();
+      System.out.print("Name of your game >> ");
+      z.setName(in.nextLine().trim());
+           try{
+         System.out.print("Prce of gear >> ");
+         z.setPrice(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("Weight of your gear >> ");
+         z.setWeight(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      } 
+   }
+   
 }

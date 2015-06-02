@@ -6,6 +6,7 @@ public class Armor{
    int armorMod;
    int speedMod;
    int checkMod;
+   int proBonus
    String info;
    
    public Armor(){}

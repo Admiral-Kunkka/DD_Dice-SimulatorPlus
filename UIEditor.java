@@ -207,9 +207,64 @@ public class UIEditor{
          k.setMiscAC(Integer.parseInt(in.nextLine().trim()));
       }catch(Exception e){
          System.out.println("That's not a number you idiot!");
-      }try{
+      }
+      try{
          System.out.print("What is the Fortification of your character >> ");
          k.setMiscFORT(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Reflex of your character >> ");
+         k.setMiscREF(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Will Power of your character >> ");
+         k.setMiscWILL(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Speed of your character >> ");
+         k.setMiscSpeed(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Strength of your character >> ");
+         k.setStr(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Constitution of your character >> ");
+         k.setCon(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Dexterity of your character >> ");
+         k.setDex(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Intellegence of your character >> ");
+         k.setIntel(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Wisdom of your character >> ");
+         k.setWis(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Charisma of your character >> ");
+         k.setCha(Integer.parseInt(in.nextLine().trim()));
       }catch(Exception e){
          System.out.println("That's not a number you idiot!");
       }

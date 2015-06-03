@@ -268,6 +268,108 @@ public class UIEditor{
       }catch(Exception e){
          System.out.println("That's not a number you idiot!");
       }
+      try{
+         System.out.print("What are the Acrobatics of your character >> ");
+         k.setAcrobatics(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Arcana of your character >> ");
+         k.setArcana(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What are the Athletics of your character >> ");
+         k.setAthletics(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Bluff of your character >> ");
+         k.setBluff(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Diplomacy of your character >> ");
+         k.setDiplomacy(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Dungeoneering of your character >> ");
+         k.setDungeoneering(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Endurance of your character >> ");
+         k.setEndurance(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Heal of your character >> ");
+         k.setHeal(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the History of your character >> ");
+         k.setHistory(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Insight of your character >> ");
+         k.setInsight(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Intimidate of your character >> ");
+         k.setIntimidate(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Nature of your character >> ");
+         k.setNature(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Perception of your character >> ");
+         k.setPerception(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Religion of your character >> ");
+         k.setReligion(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Stealth of your character >> ");
+         k.setStealth(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Streetwise of your character >> ");
+         k.setStreetwise(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+      try{
+         System.out.print("What is the Theivery of your character >> ");
+         k.setThievery(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
    }
    
 }

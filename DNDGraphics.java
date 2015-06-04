@@ -33,9 +33,11 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
    public boolean ifEdit = false;
    
    DiceRoller something = new DiceRoller();
+   UIEditor UI = new UIEditor();
    
    public Font myFont = new Font("Comic Sans MS", Font.BOLD, 48);
    public Font normal = new Font("serif", Font.BOLD, 20);
+   public Font attention = new Font("Times New Roman",Font.BOLD,80);
 
    public int die;
    public String theDie = "";
@@ -148,7 +150,7 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       }      
       if(mouseDown && mouseX>=730 && mouseX<=780 && mouseY>=850 && mouseY<=900)
          ifEdit = true;
-      else
+      if(mouseDown && mouseX>=0 && mouseX<=50 && mouseY>=0 && mouseY<=50)
          ifEdit = false;        
              
       if(ifReset){
@@ -261,8 +263,6 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.setColor(Color.darkGray);
          g.fillRect(1690,25,100,50);
       }  
-       
-      //rolls the die  
       
       
       g.setColor(Color.blue);
@@ -277,5 +277,17 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       g.drawString("Reset",1630,755);
       g.drawString("Flip",740,100);
       g.drawString("Edit",740,875);
+      if(ifEdit){
+         g.setColor(Color.white);
+         g.fillRect(0,0,1915,1280);
+         g.setColor(Color.gray);
+         g.fillRect(0,0,50,50);
+         g.setColor(Color.blue);
+         g.setFont(attention);
+         g.drawString("Please move applet!",750,450);
+         g.setFont(normal);
+         g.drawString("Exit",10,20);
+         UI.Editor();
+      }
    }
 }

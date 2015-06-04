@@ -44,12 +44,16 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       setSize(1915, 1280);
       setBackground(new Color(102, 51, 0));
       addMouseListener(this);
+<<<<<<< HEAD
       addMouseMotionListener(this);   
       try {
            img = ImageIO.read(new File("DND Front Sheet1.png"));
            imag = ImageIO.read(new File("DND Back Sheet1.png"));
        } catch (IOException e) {
        }   
+=======
+      addMouseMotionListener(this);      
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
    }
    
    public void mouseClicked(MouseEvent e){
@@ -78,6 +82,7 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
    public void paint(Graphics g){
    g.setFont(normal);
       if(ifFlipped){
+<<<<<<< HEAD
          /*g.setColor(Color.white);
          g.fillRect(15, 15, 750, 895);
          */
@@ -87,6 +92,14 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          /*g.setColor(Color.black);
          g.fillRect(15,15,750,895);*/
          g.drawImage(imag,15,15,null);
+=======
+         g.setColor(Color.white);
+         g.fillRect(15, 15, 750, 895);
+      }
+      else{
+         g.setColor(Color.black);
+         g.fillRect(15,15,750,895);
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
       }   
       
       g.setColor(Color.gray);
@@ -98,8 +111,13 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       g.fillRect(940,25,100,50);
       g.fillRect(1250,700,200,100);
       g.fillRect(1550,700,200,100);
+<<<<<<< HEAD
       g.fillRect(730,75,50,50);
       g.fillRect(730,850,50,50);
+=======
+      g.fillRect(775,75,50,50);
+      g.fillRect(775,850,50,50);
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
       
       if(mouseDown && mouseX>=1250 && mouseX<=1450 && mouseY>=700 && mouseY<=800)
          ifRollButtonPressed = true;
@@ -127,6 +145,7 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       else
          ifReset = false;  
       
+<<<<<<< HEAD
       if(mouseDown && mouseX>730 && mouseX<=780 && mouseY>=75 && mouseY<=125){
          if(ifFlipped){
             ifFlipped = false; 
@@ -140,6 +159,15 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          }     
       }      
       if(mouseDown && mouseX>=730 && mouseX<=780 && mouseY>=850 && mouseY<=900)
+=======
+      if(mouseDown && mouseX>775 && mouseX<=825 && mouseY>=75 && mouseY<=125){
+         if(ifFlipped)
+            ifFlipped = false;  
+         else
+            ifFlipped = true;   
+      }      
+      if(mouseDown && mouseX>=775 && mouseX<=825 && mouseY>=850 && mouseY<=900)
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
          ifEdit = true;
       else
          ifEdit = false;        
@@ -157,7 +185,11 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       }            
       if(ifEdit){
          g.setColor(Color.darkGray);
+<<<<<<< HEAD
          g.fillRect(730,850,50,50);
+=======
+         g.fillRect(775,850,50,50);
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
       }                 
       if(ifRollButtonPressed){
          g.setColor(Color.darkGray);
@@ -179,7 +211,11 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
             g.fillRect(1200,250,300,300);
             g.setColor(Color.blue);
             g.setFont(myFont);
+<<<<<<< HEAD
             g.drawString(theDie,1340,420);
+=======
+            g.drawString(theDie,1340,450);
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
             g.setFont(normal);
          }   
          if(ifD8){
@@ -221,10 +257,14 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
             g.fillPolygon(xPointsTriangle, yPointsTriangle, 3);
             g.setColor(Color.blue);
             g.setFont(myFont);
+<<<<<<< HEAD
             if(theDie.length() == 2)
                g.drawString(theDie,1330,450);
             else
                g.drawString(theDie,1340,450);
+=======
+            g.drawString(theDie,1340,450);
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
             g.setFont(normal);
          }   
       }
@@ -266,7 +306,12 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       g.drawString("4",980,55);
       g.drawString("Roll",1330,755);
       g.drawString("Reset",1630,755);
+<<<<<<< HEAD
       g.drawString("Flip",740,100);
       g.drawString("Edit",740,875);
+=======
+      g.drawString("Flip",780,100);
+      g.drawString("Edit",780,875);
+>>>>>>> eb75436486edd30cdf8b7cf30380b6f9339264e8
    }
 }

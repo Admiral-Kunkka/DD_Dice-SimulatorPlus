@@ -396,6 +396,43 @@ public class UIEditor{
       }catch(Exception e){
          System.out.println("That's not a number you idiot!");
       }
+       try{
+         System.out.print("What is the HP of your character >> ");
+         k.setHP(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+       try{
+         System.out.print("What is the Surge Value of your character >> ");
+         k.setSurgeValue(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+       try{
+         System.out.print("What is the Number of Surges per day of your character >> ");
+         k.setNumSurge(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+       try{
+         System.out.print("What is the AP of your character >> ");
+         k.setAP(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }
+       try{
+         System.out.print("What is the initiative of your character >> ");
+         k.setInitiative(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+         }
+      System.out.print("Describe your personality of your character >> ");
+         k.setPersonality(in.nextLine().trim());
+      System.out.print("Describe the appearance of your character >> ");
+         k.setAppearance(in.nextLine().trim()); 
+      System.out.print("Describe the background >> ");
+         k.setBackground(in.nextLine().trim());     
+      
    }
    public static void editSpclAbility(){
       SpclAbility p = new SpclAbility();

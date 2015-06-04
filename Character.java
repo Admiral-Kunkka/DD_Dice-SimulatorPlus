@@ -33,6 +33,14 @@ public class Character{
    int intel; 
    int wis; 
    int cha;
+   int hp;
+   int surgeValue; 
+   int numSurge; 
+   int ap; 
+   int initiative; 
+   String personality; 
+   String appearance; 
+   String background; 
    //skills
    int acrobatics; 
    int arcana; 
@@ -109,6 +117,14 @@ public class Character{
    public void setStealth(int x){stealth = x + level/2;}
    public void setStreetwise(int x){streetwise = x + level/2;}
    public void setThievery(int x){thievery = x + level/2;}
+   public void setHP(int x){hp = x + con;}
+   public void setSurgeValue(int x){surgeValue = hp/4;}
+   public void setNumSurge(int x){numSurge = x;}
+   public void setAP(int x){ap = x;}
+   public void setInitiative(int x){initiative = x + level/2 + dex;}
+   public void setPersonality(String x){personality = x;}
+   public void setAppearance(String x){appearance = x;}
+   public void setBackground(String x){background = x;}
    
    
  //Get Methods
@@ -160,6 +176,14 @@ public class Character{
    public int getStealth(){return stealth;}
    public int getStreetwise(){return streetwise;}
    public int getThievery(){return thievery;}
+   public int getHP(){return hp;}
+   public int getSurgeValue(){return surgeValue;}
+   public int getNumSurge(){return numSurge;}
+   public int getAP(){return ap;}
+   public int getInitiative(){return initiative;}
+   public String getPersonality(){return personality;} 
+   public String getAppearance(){return appearance;}
+   public String getBackground(){return background;}
    
 
    public int baseAttack()

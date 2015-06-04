@@ -4,18 +4,40 @@ import java.util.*;
 
 public class UIEditor{
    private static Scanner in;
+   private static int selection;
    public static void main(String[] args){
       in = new Scanner(System.in);
-      System.out.println("Welcome to your editor choose to edit Armor");
-      editArmor();
-      editWeapon();
-      editAdventGear();
+      while(selection != 8){
+      System.out.println("Welcome to your editor choose to edit Armor\n"
+                         +"Press a number to select what you want to edit!\n"
+                         +"1. Armor\n"
+                         +"2. Weapon\n"
+                         +"3. Adventure Gear\n"
+                         +"4. Ritual\n"
+                         +"5. At Will Powers\n"
+                         +"6. Special Ability\n"
+                         +"7. Character\n"
+                         +"8. Exit");
+      System.out.print("Please select an option > ");
+      selection = in.nextInt();
+      if(selection == 1){editArmor();}
+      else if(selection == 2){editWeapon();}
+      else if(selection == 3){editAdventGear();}
+      else if(selection == 4){editRitual();}
+      else if(selection == 5){editatWill();}
+      else if(selection == 6){editSpclAbility();}
+      else if(selection == 7){editCharacter();}
+      else{System.out.println("Good Luck Have Fun!");
+      System.exit(0);
+      }
+     }
    }
    public static void editArmor(){
       Armor x =  new Armor();
-      System.out.print("Name your armor >> ");
+      System.out.println("Name your armor >> ");
+      in.nextLine();
       x.setName(in.nextLine().trim());
-      System.out.print("Name the type of armor >> ");
+      System.out.println("Name the type of armor >> ");
       x.setType(in.nextLine().trim());
       try{
       System.out.print("Weight of your armor >> ");
@@ -45,11 +67,12 @@ public class UIEditor{
       }
       public static void editWeapon(){
       Weapon y = new Weapon();
-      System.out.print("Name your Weapon >> ");
+      System.out.println("Name your Weapon >> ");
+      in.nextLine();
       y.setName(in.nextLine().trim());
-      System.out.print("Name the type of Weapon >> ");
+      System.out.println("Name the type of Weapon >> ");
       y.setType(in.nextLine().trim());
-      System.out.print("Name the group of Weapon >> ");
+      System.out.println("Name the group of Weapon >> ");
       y.setGroup(in.nextLine().trim());
       try{
          System.out.print("Pro bonus of Weapon >> ");
@@ -80,7 +103,7 @@ public class UIEditor{
       }
       public static void editAdventGear(){
       adventGear z = new adventGear();
-      System.out.print("Name of your game >> ");
+      System.out.println("Name of your game >> ");
       z.setName(in.nextLine().trim());
            try{
          System.out.print("Prce of gear >> ");
@@ -98,6 +121,7 @@ public class UIEditor{
    public static void editRitual(){
       Ritual v = new Ritual();
       System.out.println("Name of the ritual >> ");
+      in.nextLine();
          v.setName(in.nextLine().trim());
       System.out.println("Name of the catagory >> ");
          v.setCatagory(in.nextLine().trim());
@@ -132,7 +156,9 @@ public class UIEditor{
    }
    public static void editCharacter(){
       Character k = new Character();
+      
       System.out.println("Name of your character >> ");
+      in.nextLine();
          k.setName(in.nextLine().trim());
       System.out.println("Your name >> ");
          k.setOwner(in.nextLine().trim());
@@ -370,6 +396,34 @@ public class UIEditor{
       }catch(Exception e){
          System.out.println("That's not a number you idiot!");
       }
+   }
+   public static void editSpclAbility(){
+      SpclAbility p = new SpclAbility();
+      System.out.println("What is the name of your Special Ability >> ");
+         in.nextLine();
+         p.setName(in.nextLine().trim());
+      System.out.print("Describe your Special Ability >> ");
+         p.setInfo(in.nextLine().trim());
+   }
+   public static void editatWill(){
+      atWill j = new atWill();
+      System.out.println("What is your at Will Power name >> ");
+      in.nextLine();
+         j.setName(in.nextLine().trim());
+      System.out.println("What is your at Will Power type >> ");
+         j.setType(in.nextLine().trim());
+      System.out.println("What is your at Will Power action type >> ");
+         j.setActionType(in.nextLine().trim());
+      System.out.println("What is your at Will Power target >> ");
+         j.setTarget(in.nextLine().trim());   
+      System.out.println("Describe your At Will Power >> ");
+         j.setInfo(in.nextLine().trim());
+      try{
+         System.out.print("What is the Range of your Will Power >> ");
+         j.setRange(Integer.parseInt(in.nextLine().trim()));
+      }catch(Exception e){
+         System.out.println("That's not a number you idiot!");
+      }  
    }
    
 }

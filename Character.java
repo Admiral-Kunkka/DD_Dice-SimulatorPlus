@@ -33,6 +33,14 @@ public class Character{
    int intel; 
    int wis; 
    int cha;
+   int hp;
+   int surgeValue; 
+   int numSurge; 
+   int ap; 
+   int initiative; 
+   String personality; 
+   String appearance; 
+   String background; 
    //skills
    int acrobatics; 
    int arcana; 
@@ -92,6 +100,32 @@ public class Character{
    public void setIntel(int x){intel = x;}
    public void setWis(int x){wis = x;}
    public void setCha(int x){cha = x;}
+   public void setAcrobatics(int x){acrobatics = x + level/2;}
+   public void setArcana(int x){arcana = x + level/2;}
+   public void setAthletics(int x){athletics = x + level/2;}
+   public void setBluff(int x){bluff = x + level/2;}
+   public void setDiplomacy(int x){diplomacy = x + level/2;}
+   public void setDungeoneering(int x){dungeoneering = x + level/2;}
+   public void setEndurance(int x){endurance = x + level/2;}
+   public void setHeal(int x){heal = x + level/2;}
+   public void setHistory(int x){history = x + level/2;}
+   public void setInsight(int x){insight = x + level/2;}
+   public void setIntimidate(int x){intimidate = x + level/2;}
+   public void setNature(int x){nature = x + level/2;}
+   public void setPerception(int x){perception = x + level/2;}
+   public void setReligion(int x){religion = x + level/2;}
+   public void setStealth(int x){stealth = x + level/2;}
+   public void setStreetwise(int x){streetwise = x + level/2;}
+   public void setThievery(int x){thievery = x + level/2;}
+   public void setHP(int x){hp = x + con;}
+   public void setSurgeValue(int x){surgeValue = hp/4;}
+   public void setNumSurge(int x){numSurge = x;}
+   public void setAP(int x){ap = x;}
+   public void setInitiative(int x){initiative = x + level/2 + dex;}
+   public void setPersonality(String x){personality = x;}
+   public void setAppearance(String x){appearance = x;}
+   public void setBackground(String x){background = x;}
+   
    
  //Get Methods
    public String getName(){return name;}
@@ -125,6 +159,32 @@ public class Character{
    public int getIntel(){return intel;}
    public int getWis(){return wis;}
    public int getCha(){return cha;}
+   public int getAcrobatics(){return acrobatics;}
+   public int getArcana(){return arcana;}
+   public int getAthletics(){return athletics;}
+   public int getBluff(){return bluff;}
+   public int getDiplomacy(){return diplomacy;}
+   public int getDungeoneering(){return dungeoneering;}
+   public int getEndurance(){return endurance;}
+   public int getHeal(){return heal;}
+   public int getHistory(){return history;}
+   public int getInsight(){return insight;}
+   public int getIntimidate(){return intimidate;}
+   public int getNature(){return nature;}
+   public int getPerception(){return perception;}
+   public int getReligion(){return religion;}
+   public int getStealth(){return stealth;}
+   public int getStreetwise(){return streetwise;}
+   public int getThievery(){return thievery;}
+   public int getHP(){return hp;}
+   public int getSurgeValue(){return surgeValue;}
+   public int getNumSurge(){return numSurge;}
+   public int getAP(){return ap;}
+   public int getInitiative(){return initiative;}
+   public String getPersonality(){return personality;} 
+   public String getAppearance(){return appearance;}
+   public String getBackground(){return background;}
+   
 
    public int baseAttack()
    {

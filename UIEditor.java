@@ -31,7 +31,7 @@ public class UIEditor{
       else if(selection == 6){editSpclAbility();}
       else if(selection == 7){editCharacter();}
       else{System.out.println("Good Luck Have Fun!");
-      System.exit(0);
+      //System.exit(0);
       }
      }
    }

@@ -6,6 +6,9 @@ public class UIEditor{
    private static Scanner in;
    private static int selection;
    public static void main(String[] args){
+      Editor();
+   }
+      public static void Editor(){
       in = new Scanner(System.in);
       while(selection != 8){
       System.out.println("Welcome to your editor choose to edit Armor\n"

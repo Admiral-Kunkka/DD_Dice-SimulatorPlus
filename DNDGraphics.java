@@ -14,6 +14,8 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
    int[] yPointsTriangle = {250,550,550};
    int[] xPointsTriangle = {1350,1150,1550};
    
+   Character character = new Character();
+   
    int mouseX;
    int mouseY;
    
@@ -31,6 +33,66 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
    public boolean ifReset = false;
    public boolean ifFlipped = true;
    public boolean ifEdit = false;
+   public boolean butts = false;
+   public boolean ShowTypeScreen = false;
+   
+   public String name = "" + character.getName();
+   public String level = " " + character.getLevel(); 
+   public String owner = " " + character.getOwner();
+   public String classType = " " + character.getClassType();
+   public String paragonPath = " " + character.getParagonPath();
+   public String epicDestiny = " " + character.getEpicDestiny();
+   public String totalXP = " " + character.getTotalXP();
+   public String race = " " + character.getRace();
+   public String size = " " + character.getSize();
+   public String age = " " + character.getAge();
+   public String gender = " " + character.getGender();
+   public String height = " " + character.getHeight();
+   public String weight = " " + character.getWeight();
+   public String alignment = " " + character.getAlignment();
+   public String deity = " " + character.getDeity();
+   public String abilityMod = " " + character.getAbilityMod();
+   public String raceSpeed = " " + character.getRaceSpeed(); 
+   public String raceDef = " " + character.getRaceDef();
+   public String raceAtk = " " + character.getRaceAtk();
+   public String miscBA = " " + character.getMiscBA(); 
+   public String miscAC = " " + character.getMiscAC(); 
+   public String miscFORT = " " + character.getMiscFORT(); 
+   public String miscREF = " " + character.getMiscREF(); 
+   public String miscWILL = " " + character.getMiscWILL(); 
+   public String miscSpeed = " " + character.getMiscSpeed(); 
+   public String str = " " + character.getStr();
+   public String con = " " + character.getCon();
+   public String dex = " " + character.getDex(); 
+   public String intel = " " + character.getIntel(); 
+   public String wis = " " + character.getWis(); 
+   public String cha = " " + character.getCha();
+   public String hp = " " + character.getHP();
+   public String surgeValue = " " + character.getSurgeValue(); 
+   public String numSurge = " " + character.getNumSurge(); 
+   public String ap = " " + character.getAP(); 
+   public String initiative = " " + character.getInitiative(); 
+   public String personality = " " + character.getPersonality(); 
+   public String appearance = " " + character.getAppearance(); 
+   public String background = " " + character.getBackground(); 
+   //skills
+   public String acrobatics = " " + character.getAcrobatics(); 
+   public String arcana = " " + character.getArcana(); 
+   public String athletics = " " + character.getAthletics();
+   public String bluff = " " + character.getBluff(); 
+   public String diplomacy = " " + character.getDiplomacy(); 
+   public String dungeoneering = " " + character.getDungeoneering(); 
+   public String endurance = " " + character.getEndurance(); 
+   public String heal = " " + character.getHeal(); 
+   public String history = " " + character.getHistory(); 
+   public String insight = " " + character.getInsight(); 
+   public String intimidate = " " + character.getIntimidate(); 
+   public String nature = " " + character.getNature(); 
+   public String perception = " " + character.getPerception(); 
+   public String religion = " " + character.getReligion(); 
+   public String stealth = " " + character.getStealth(); 
+   public String streetwise = " " + character.getStreetwise(); 
+   public String thievery = " " + character.getThievery();
    
    DiceRoller something = new DiceRoller();
    UIEditor UI = new UIEditor();
@@ -85,11 +147,100 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.fillRect(15, 15, 750, 895);
          */
          g.drawImage(img,15,15,null);
+         g.setColor(Color.red);
+         
+         g.drawString(name,20,30);
+         g.drawString(level,270,34);
+         g.drawString(classType,300,30);
+         g.drawString(paragonPath,415,30);
+         g.drawString(epicDestiny,525,30);
+         g.drawString(totalXP,650,34);
+         g.drawString(race,20,58);
+         g.drawString(size,160,58);
+         g.drawString(age,205,58);
+         g.drawString(gender,235,58);
+         g.drawString(height,272,58);
+         g.drawString(weight,325,58);
+         g.drawString(alignment,375,58);
+         g.drawString(deity,450,58);
+         
+         g.drawString(str,30,178);
+         g.drawString(con,30,202);
+         g.drawString(dex,30,234);
+         g.drawString(intel,30,257);
+            /*
+            name
+            level
+            class
+            paragon path
+            epic destiny
+            totalXP
+            race
+            size
+            age
+            gender
+            height
+            weight
+            alignment
+            deity
+            
+            intiative
+            str
+            con
+            dex
+            int
+            wis
+            cha
+            
+            
+            AC
+            FORT
+            REF
+            WILL
+            speed
+            
+            maxHP
+            bloodied
+            surgeValue
+            Action Points
+            Race Features
+            languages known
+            
+            acrobatics
+            arcana
+            athletics
+            bluff
+            diplomacy
+            dungeoneering
+            endurance
+            heal
+            history
+            insight
+            nature
+            perception
+            religion
+            stealth
+            streetwise
+            thievery
+            */
+         
       }
       else{
          /*g.setColor(Color.black);
          g.fillRect(15,15,750,895);*/
          g.drawImage(imag,15,15,null);
+         g.setColor(Color.red);
+         
+         /*
+            at-will powers
+            
+            personality traits
+            mannerisms and apperances
+            character background
+            
+            other equipment
+            */
+
       }  
       
       g.setColor(Color.gray);
@@ -103,6 +254,67 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
       g.fillRect(1550,700,200,100);
       g.fillRect(730,75,50,50);
       g.fillRect(730,850,50,50);
+      
+      if(ShowTypeScreen){
+         UI.Editor();
+           name = "" + character.getName();
+           level = " " + character.getLevel(); 
+           owner = " " + character.getOwner();
+           classType = " " + character.getClassType();
+           paragonPath = " " + character.getParagonPath();
+           epicDestiny = " " + character.getEpicDestiny();
+           totalXP = " " + character.getTotalXP();
+           race = " " + character.getRace();
+           size = " " + character.getSize();
+           age = " " + character.getAge();
+           gender = " " + character.getGender();
+           height = " " + character.getHeight();
+           weight = " " + character.getWeight();
+           alignment = " " + character.getAlignment();
+           deity = " " + character.getDeity();
+           abilityMod = " " + character.getAbilityMod();
+           raceSpeed = " " + character.getRaceSpeed(); 
+           raceDef = " " + character.getRaceDef();
+           raceAtk = " " + character.getRaceAtk();
+           miscBA = " " + character.getMiscBA(); 
+           miscAC = " " + character.getMiscAC(); 
+           miscFORT = " " + character.getMiscFORT(); 
+           miscREF = " " + character.getMiscREF(); 
+           miscWILL = " " + character.getMiscWILL(); 
+           miscSpeed = " " + character.getMiscSpeed(); 
+           str = " " + character.getStr();
+           con = " " + character.getCon();
+           dex = " " + character.getDex(); 
+           intel = " " + character.getIntel(); 
+           wis = " " + character.getWis(); 
+           cha = " " + character.getCha();
+           hp = " " + character.getHP();
+           surgeValue = " " + character.getSurgeValue(); 
+           numSurge = " " + character.getNumSurge(); 
+           ap = " " + character.getAP(); 
+           initiative = " " + character.getInitiative(); 
+           personality = " " + character.getPersonality(); 
+           appearance = " " + character.getAppearance(); 
+           background = " " + character.getBackground(); 
+         //skills
+           acrobatics = " " + character.getAcrobatics(); 
+           arcana = " " + character.getArcana(); 
+           athletics = " " + character.getAthletics();
+           bluff = " " + character.getBluff(); 
+           diplomacy = " " + character.getDiplomacy(); 
+           dungeoneering = " " + character.getDungeoneering(); 
+           endurance = " " + character.getEndurance(); 
+           heal = " " + character.getHeal(); 
+           history = " " + character.getHistory(); 
+           insight = " " + character.getInsight(); 
+           intimidate = " " + character.getIntimidate(); 
+           nature = " " + character.getNature(); 
+           perception = " " + character.getPerception(); 
+           religion = " " + character.getReligion(); 
+           stealth = " " + character.getStealth(); 
+           streetwise = " " + character.getStreetwise(); 
+           thievery = " " + character.getThievery();
+      }
       
       if(mouseDown && mouseX>=1250 && mouseX<=1450 && mouseY>=700 && mouseY<=800)
          ifRollButtonPressed = true;
@@ -189,7 +401,7 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
             g.setColor(Color.blue);
             g.setFont(myFont);
             g.drawString(theDie,1340,420);
-            g.drawString(theDie,1340,450);
+            //g.drawString(theDie,1340,450);
             g.setFont(normal);
          }   
          if(ifD8){
@@ -235,7 +447,7 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
                g.drawString(theDie,1330,450);
             else
                g.drawString(theDie,1340,450);
-            g.drawString(theDie,1340,450);
+            //g.drawString(theDie,1340,450);
             g.setFont(normal);
          }   
       }
@@ -263,8 +475,6 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.setColor(Color.darkGray);
          g.fillRect(1690,25,100,50);
       }  
-      
-      
       g.setColor(Color.blue);
       g.drawString("Select type of die",790,55);
       g.drawString("20",1730,55);
@@ -287,7 +497,8 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.drawString("Please move applet!",750,450);
          g.setFont(normal);
          g.drawString("Exit",10,20);
-         UI.Editor();
+         repaint();
+         ShowTypeScreen = true;
       }
    }
 }

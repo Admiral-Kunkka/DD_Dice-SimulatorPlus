@@ -148,7 +148,63 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          */
          g.drawImage(img,15,15,null);
          g.setColor(Color.red);
-         
+         name = "" + character.getName();
+           level = " " + character.getLevel(); 
+           owner = " " + character.getOwner();
+           classType = " " + character.getClassType();
+           paragonPath = " " + character.getParagonPath();
+           epicDestiny = " " + character.getEpicDestiny();
+           totalXP = " " + character.getTotalXP();
+           race = " " + character.getRace();
+           size = " " + character.getSize();
+           age = " " + character.getAge();
+           gender = " " + character.getGender();
+           height = " " + character.getHeight();
+           weight = " " + character.getWeight();
+           alignment = " " + character.getAlignment();
+           deity = " " + character.getDeity();
+           abilityMod = " " + character.getAbilityMod();
+           raceSpeed = " " + character.getRaceSpeed(); 
+           raceDef = " " + character.getRaceDef();
+           raceAtk = " " + character.getRaceAtk();
+           miscBA = " " + character.getMiscBA(); 
+           miscAC = " " + character.getMiscAC(); 
+           miscFORT = " " + character.getMiscFORT(); 
+           miscREF = " " + character.getMiscREF(); 
+           miscWILL = " " + character.getMiscWILL(); 
+           miscSpeed = " " + character.getMiscSpeed(); 
+           str = " " + character.getStr();
+           con = " " + character.getCon();
+           dex = " " + character.getDex(); 
+           intel = " " + character.getIntel(); 
+           wis = " " + character.getWis(); 
+           cha = " " + character.getCha();
+           hp = " " + character.getHP();
+           surgeValue = " " + character.getSurgeValue(); 
+           numSurge = " " + character.getNumSurge(); 
+           ap = " " + character.getAP(); 
+           initiative = " " + character.getInitiative(); 
+           personality = " " + character.getPersonality(); 
+           appearance = " " + character.getAppearance(); 
+           background = " " + character.getBackground(); 
+         //skills
+           acrobatics = " " + character.getAcrobatics(); 
+           arcana = " " + character.getArcana(); 
+           athletics = " " + character.getAthletics();
+           bluff = " " + character.getBluff(); 
+           diplomacy = " " + character.getDiplomacy(); 
+           dungeoneering = " " + character.getDungeoneering(); 
+           endurance = " " + character.getEndurance(); 
+           heal = " " + character.getHeal(); 
+           history = " " + character.getHistory(); 
+           insight = " " + character.getInsight(); 
+           intimidate = " " + character.getIntimidate(); 
+           nature = " " + character.getNature(); 
+           perception = " " + character.getPerception(); 
+           religion = " " + character.getReligion(); 
+           stealth = " " + character.getStealth(); 
+           streetwise = " " + character.getStreetwise(); 
+           thievery = " " + character.getThievery();
          g.drawString(name,20,30);
          g.drawString(level,270,34);
          g.drawString(classType,300,30);
@@ -168,61 +224,40 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.drawString(con,30,202);
          g.drawString(dex,30,234);
          g.drawString(intel,30,257);
-            /*
-            name
-            level
-            class
-            paragon path
-            epic destiny
-            totalXP
-            race
-            size
-            age
-            gender
-            height
-            weight
-            alignment
-            deity
-            
-            intiative
-            str
-            con
-            dex
-            int
-            wis
-            cha
-            
-            
-            AC
-            FORT
-            REF
-            WILL
-            speed
-            
-            maxHP
-            bloodied
-            surgeValue
-            Action Points
-            Race Features
-            languages known
-            
-            acrobatics
-            arcana
-            athletics
-            bluff
-            diplomacy
-            dungeoneering
-            endurance
-            heal
-            history
-            insight
-            nature
-            perception
-            religion
-            stealth
-            streetwise
-            thievery
-            */
+         g.drawString(wis,30,290);
+         g.drawString(cha,30,313);
+         
+         g.drawString(initiative,30,113);
+         g.drawString(miscAC,265,120);
+         g.drawString(miscFORT,265,185);
+         g.drawString(miscREF,265,240);
+         g.drawString(miscWILL,265,295);
+         
+         g.drawString(miscSpeed,500,113);
+         
+         g.drawString(hp,37,375);
+         g.drawString(surgeValue,150,375);
+         g.drawString(ap,265,360);
+         
+         g.drawString(acrobatics,28,624);
+         g.drawString(arcana,28,642);
+         g.drawString(athletics,28,660);
+         g.drawString(bluff,28,678);
+         g.drawString(diplomacy,28,696);
+         g.drawString(dungeoneering,28,714);
+         g.drawString(endurance,28,732);
+         g.drawString(heal,28,750);
+         g.drawString(history,28,768);
+         g.drawString(insight,28,786);
+         g.drawString(intimidate,28,804);
+         g.drawString(nature,28,822);
+         g.drawString(perception,28,840);
+         g.drawString(religion,28,858);
+         g.drawString(stealth,28,876);
+         g.drawString(streetwise,28,894);
+         g.drawString(thievery,28,912);
+         
+         g.drawString(miscBA,690,500);
          
       }
       else{
@@ -230,6 +265,8 @@ public class DNDGraphics extends Applet implements MouseListener, MouseMotionLis
          g.fillRect(15,15,750,895);*/
          g.drawImage(imag,15,15,null);
          g.setColor(Color.red);
+         
+         //g.drawString();
          
          /*
             at-will powers
